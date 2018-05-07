@@ -3,7 +3,7 @@
 
 
 
-## 方法列表
+### 方法列表
 ```
   InArray(obj interface{},target interface{})bool   //检测 指定的value值是否存在Array，Slice，或者Map的value中
   ToMd5(obj interface{})string               
