@@ -38,8 +38,22 @@ func InArray(obj interface{},target interface{})bool{
 
 	return false
 }
+/**
+反转字符串
+ */
+func Reversal(src string)string{
+	//abdefghijkl
+	srcStr := []rune(src)
+	for i,j := 0,len(srcStr) - 1;i < j;i++{
+		srcStr[i],srcStr[j] = srcStr[j],srcStr[i]
+		j--
+	}
+	return string(srcStr)
+}
 
-//md5
+/**
+md5
+ */
 func ToMd5(obj interface{})string{
 	var ret string
 	switch obj := obj.(type) {
