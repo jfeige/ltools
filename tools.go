@@ -42,7 +42,6 @@ func InArray(obj interface{},target interface{})bool{
 反转字符串
  */
 func Reversal(src string)string{
-	//abdefghijkl
 	srcStr := []rune(src)
 	for i,j := 0,len(srcStr) - 1;i < j;i++{
 		srcStr[i],srcStr[j] = srcStr[j],srcStr[i]
