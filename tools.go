@@ -94,18 +94,27 @@ func RandStr(length int,format ...string)string{
 	switch tp {
 	case "char":
 		bytes = []byte("abcdefghijklmnopqrstuvwxyz")
+		if length > len(bytes){
+			length = len(bytes)
+		}
 		r = rd.New(rd.NewSource(time.Now().UnixNano()))
 		for i := 0; i < length;i++{
 			result = append(result,bytes[r.Intn(len(bytes))])
 		}
 	case "number":
 		bytes = []byte("0123456789")
+		if length > len(bytes){
+			length = len(bytes)
+		}
 		r = rd.New(rd.NewSource(time.Now().UnixNano()))
 		for i := 0; i < length;i++{
 			result = append(result,bytes[r.Intn(len(bytes))])
 		}
 	default:
 		bytes = []byte("abcdefghijklmnopqrstuvwxyz0123456789")
+		if length > len(bytes){
+			length = len(bytes)
+		}
 		r = rd.New(rd.NewSource(time.Now().UnixNano()))
 		for i := 0; i < length;i++{
 			result = append(result,bytes[r.Intn(len(bytes))])
