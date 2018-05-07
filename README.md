@@ -11,7 +11,7 @@
   Rand(src int)int                                  //返回指定范围内的随机数
   IntToByte(src int)[]byte                          //整型转字节
   ByteToInt(src []byte)int                          //字节转整型
-  
-  ...
+  Reversal(src string)string                        //反转字符串
+  ...
   
 ```
